@@ -1,0 +1,202 @@
+.wrapper {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.header {
+    background-attachment: fixed;
+    background-image: url('../img/news_bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .header--top {
+    background-color: #13100E;
+    padding-bottom: 10px;
+}
+
+.header .header__title {
+    padding: 12rem 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header .header__title h1 {
+    color: white;
+    font-weight: 700;
+}
+
+.header .header__title p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.header .header__title a {
+    color: white;
+}
+
+.header .header__title a:hover {
+    color: #C89551;
+    text-decoration: none;
+}
+
+
+/* product */
+
+.product {
+    padding: 5rem 0;
+}
+
+.product .menu-side-bar .item-side-bar {
+    padding-bottom: 3rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.product .menu-side-bar .item-side-bar ul li {
+    padding: 10px 0px;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0px;
+}
+
+.product .menu-side-bar .item-side-bar ul li a {
+    text-decoration: none;
+}
+
+.product .menu-side-bar .item-side-bar ul li:last-child {
+    border-bottom: 0px;
+}
+
+.product .menu-side-bar .item-side-bar button.accordion {
+    color: #c89551;
+    cursor: pointer;
+    padding: 15px 0px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    position: relative;
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: 'Roboto Slab', serif;
+    background-color: white;
+}
+
+.product .menu-side-bar .item-side-bar button.accordion::after {
+    content: '\f067';
+    font-family: FontAwesome;
+    color: #c89551;
+    position: absolute;
+    top: calc(50% - 9px);
+    right: 10px;
+}
+
+.product .menu-side-bar .item-side-bar .panel {
+    padding: 0 15px;
+    max-height: 100%;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    font-size: 1.4rem;
+}
+
+.product .menu-side-bar .item-side-bar .active {
+    max-height: 0;
+}
+
+.product .menu-side-bar .item-side-bar .panel>ul {
+    margin: 0px;
+    padding-bottom: 15px;
+}
+
+.product .menu-side-bar .item-side-bar .panel>ul>li {
+    margin-bottom: 5px;
+}
+
+.product .menu-side-bar .item-side-bar .panel>ul>li>a {
+    display: inline-block;
+    position: relative;
+    color: #000000;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.product .menu-side-bar .item-side-bar .panel>ul>li>a:hover {
+    color: #c89551;
+    transition: all 0.3s ease;
+}
+
+.product .menu-side-bar .item-side-bar .panel>ul>li>ul>li {
+    margin: 5px 0px;
+    padding-left: 15px;
+}
+
+.product .menu-side-bar .item-side-bar .panel>ul>li>ul>li>a {
+    display: inline-block;
+    position: relative;
+    color: #000000;
+}
+
+.product .menu-side-bar .item-side-bar .panel>ul>li>ul>li>a:hover {
+    color: #c89551;
+}
+
+.no-bullets li input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    background: none;
+    border: 1px solid gray !important;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.no-bullets li input[type="checkbox"]:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    display: block;
+    outline: none;
+    color: #c89551;
+    outline: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid #dedede;
+}
+
+.product .menu-side-bar .item-side-bar #menubar1 ul li {
+    padding: 0px 0px;
+    border-bottom: 0px;
+    margin: 0px;
+}
+
+.product .menu-side-bar .item-side-bar #menubar2 ul li {
+    padding: 0px 0px;
+    border-bottom: 0px;
+    margin: 0px;
+}
+
+.product .menu-side-bar .item-side-bar #menubar3 ul li {
+    padding: 0px 0px;
+    border-bottom: 0px;
+    margin: 0px;
+}
+
+.product .menu-side-bar .item-side-bar #menubar4 ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product .menu-side-bar .item-side-bar #menubar4 ul li {
+    padding: 0px 0px;
+    border-bottom: 0px;
+    margin: 0px;
+    width: 50%;
+}
+
+
+/* end product */

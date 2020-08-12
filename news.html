@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>new</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/news.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+    <!-- link css slick slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+    <script>
+        // menu
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <div class="header">
+            <div class="header--top">
+                <!-- header top -->
+                <div class="header__top">
+                    <ul class="header__top-icon">
+                        <li><a href="http://"><i class="fa fa-facebook fa-lg icon" aria-hidden="true"></i> </a></li>
+                        <li><a href="http://"><i class="fa fa-instagram fa-lg icon" aria-hidden="true"></i> </a></li>
+                        <li><a href="http://"><i class="fa fa-youtube-play fa-lg icon" aria-hidden="true"></i></a></li>
+                        <li><a href="http://"><i class="fa fa-twitter fa-lg icon" aria-hidden="true"></i></a></li>
+                        <li><a href="http://"><i class="fa fa-google-plus fa-lg icon" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <ul class="header__top-contact">
+                        <li><a href="http://"><i class="fa fa-map-marker" aria-hidden="true"></i> Hệ thống cửa hàng</a></li>
+                        <li><a href="http://"><i class="fa fa-phone" aria-hidden="true"></i> (+84)934 323 882</a></li>
+                        <li><a href="http://"><i class="fa fa-envelope" aria-hidden="true"></i> support@suplo.vn</a></li>
+                    </ul>
+                </div>
+                <!-- end header top -->
+                <!-- header menu -->
+                <div class="header__menu">
+                    <div class="header__menu-logo">
+                        <img src="./assets/img/logo.webp" alt="">
+                    </div>
+                    <div class="header__menu-list">
+                        <div class="header__menu-border">
+                            <div>
+                                <ul class="menu-list">
+                                    <li class="list-item"><a href="http://">TRANG CHỦ</a></li>
+                                    <li class="list-item"><a href="http://">TẤT CẢ SẢN PHẨM <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <!-- mega menu -->
+                                        <div class="mega-menu">
+                                            <div class="mega-menu-child">
+                                                <div class="mega-component">
+                                                    <h3>Nội thất gỗ</h3>
+                                                    <ul class="component-menu">
+                                                        <li><a href="http://">- Nội thất phòng khách</a></li>
+                                                        <li><a href="http://">- Nội thất phòng ngủ</a></li>
+                                                        <li><a href="http://">- Nội thất văn phòng</a></li>
+                                                        <li><a href="http://">- Nội thất phòng khách</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mega-menu-child"></div>
+                                            <div class="mega-menu-child"></div>
+                                            <div class="mega-menu-child"></div>
+                                        </div>
+                                        <!-- end mega menu -->
+                                    </li>
+                                    <li class="list-item"><a href="http://">TIN TỨC <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                                    <li class="list-item"><a href="http://">GIỚI THIỆU</a></li>
+                                    <li class="list-item"><a href="http://">LIÊN HỆ</a></li>
+                                    <li class="list-item"><a href="http://"><i class="fa fa-search" aria-hidden="true"></i> </a></li>
+                                    <li class="list-item"><a href="http://"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                                    <li class="list-item"><a href="http://"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end header menu -->
+            </div>
+            <!-- header title -->
+            <div class="header__title text-center">
+                <h1>TẤT CẢ TIN TỨC</h1>
+                <p><a href="http://">Trang chủ</a>/Tất cả tin tức</p>
+            </div>
+            <!-- end header title -->
+        </div>
+        <!-- end header -->
+        <!-- content -->
+        <div class="content">
+            <div class="container">
+                <div class="content__content">
+                    <!-- content blog -->
+                    <div class="content__blog float-right">
+                        <div class="blog-content medium--one-whole small--one-whole">
+                            <!-- loop all blog -->
+                            <div class="blog-single-item">
+                                <div class="section-title">
+                                    <div class="title">
+                                        <h3>TIN TỨC</h3>
+                                    </div>
+                                    <div class="line1">
+
+                                    </div>
+                                    <div class="viewmore">
+                                        <a href="http://">Xem tất cả<i class="fa fa-angle-right" aria-hidden="true"></i> </a>
+                                    </div>
+                                </div>
+                                <div class="line-left"></div>
+                                <div class="blog-single-slide">
+                                    <div class="item">
+
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide6.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> ĐI TÌM GỖ ĐÓNG TỦ VẠN NĂNG GHÉP ĐƯỢC MUỘN VẠN KIỂU</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide1.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> Kiểu tủ gương vừa xinh vừa tiện cho nhà chật hẹp</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide2.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> 15 đồ nội thất tái chế từ gỗ thừa đem tới vẻ đẹp vintage cho ngôi nhà</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide5.jpg" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> Móc treo đồ đàn accordion treo đâu cũng thành xinh</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide3.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> Căn hộ ấm áp nhờ biết cách sử dụng nội thất gỗ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide4.jpg" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://">Người dân thay phiên nhau 'canh gác' 2 gốc cây sưa tiền tỷ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-single-item">
+                                <div class="section-title">
+                                    <div class="title">
+                                        <h3>TIN TỨC</h3>
+                                    </div>
+                                    <div class="line1">
+
+                                    </div>
+                                    <div class="viewmore">
+                                        <a href="http://">Xem tất cả<i class="fa fa-angle-right" aria-hidden="true"></i> </a>
+                                    </div>
+                                </div>
+                                <div class="line-left"></div>
+                                <div class="blog-single-slide">
+                                    <div class="item">
+
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide6.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> ĐI TÌM GỖ ĐÓNG TỦ VẠN NĂNG GHÉP ĐƯỢC MUỘN VẠN KIỂU</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide1.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> Kiểu tủ gương vừa xinh vừa tiện cho nhà chật hẹp</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide2.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> 15 đồ nội thất tái chế từ gỗ thừa đem tới vẻ đẹp vintage cho ngôi nhà</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide5.jpg" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> Móc treo đồ đàn accordion treo đâu cũng thành xinh</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide3.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> Căn hộ ấm áp nhờ biết cách sử dụng nội thất gỗ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide4.jpg" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://">Người dân thay phiên nhau 'canh gác' 2 gốc cây sưa tiền tỷ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-single-item">
+                                <div class="section-title">
+                                    <div class="title">
+                                        <h3>TIN TỨC</h3>
+                                    </div>
+                                    <div class="line1">
+
+                                    </div>
+                                    <div class="viewmore">
+                                        <a href="http://">Xem tất cả<i class="fa fa-angle-right" aria-hidden="true"></i> </a>
+                                    </div>
+                                </div>
+                                <div class="line-left"></div>
+                                <div class="blog-single-slide">
+                                    <div class="item">
+
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide6.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> ĐI TÌM GỖ ĐÓNG TỦ VẠN NĂNG GHÉP ĐƯỢC MUỘN VẠN KIỂU</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide1.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> Kiểu tủ gương vừa xinh vừa tiện cho nhà chật hẹp</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide2.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> 15 đồ nội thất tái chế từ gỗ thừa đem tới vẻ đẹp vintage cho ngôi nhà</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide5.jpg" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> Móc treo đồ đàn accordion treo đâu cũng thành xinh</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide3.webp" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://"> Căn hộ ấm áp nhờ biết cách sử dụng nội thất gỗ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="article-item">
+                                            <div class="article">
+                                                <div class="article-img">
+                                                    <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide4.jpg" alt=""></a>
+                                                    <div class="article-date text-center">
+                                                        <div>12</div>
+                                                        <span>04/18</span>
+                                                    </div>
+                                                </div>
+                                                <div class="article-info text-center">
+                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                                    <div class="article-title text-center">
+                                                        <a href="http://">Người dân thay phiên nhau 'canh gác' 2 gốc cây sưa tiền tỷ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end loop all blog -->
+                        </div>
+                    </div>
+                    <!-- end content blog -->
+                    <!-- content side bar -->
+                    <div class="content__sidebar medium--one-whole small--one-whole">
+                        <!-- list categories -->
+                        <div class="list-categories">
+                            <div class="blog-sb-title">
+                                <h4>DANH MỤC TIN TỨC</h4>
+                            </div>
+                            <ul class="list">
+                                <li><a href="#">Tin tức</a></li>
+                                <li><a href="#">Mẹo </a></li>
+                                <li><a href="#">Tin nổi bật</a></li>
+                            </ul>
+                        </div>
+                        <!-- end list categories -->
+                        <!-- all tag -->
+                        <div class="all-tags">
+                            <div class="blog-sb-title">
+                                <h4>DANH MỤC TIN TỨC</h4>
+                            </div>
+                            <div class="blog_tag">
+                                <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Mẹo</a>
+                                <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Handmade</a>
+                                <br>
+                                <a href="http://"><i class="fa fa-tag" aria-hidden="true"></i> Bài viết nổi bật</a>
+                                <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Handmade</a>
+                                <br>
+                                <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Tin tức</a>
+                            </div>
+                        </div>
+                        <div class="blog-banner">
+                            <img src="./assets/img/blog_banner_2.webp" alt="" class="blog-banner-img">
+                        </div>
+                        <!-- end all tag -->
+                    </div>
+                    <!-- end content side bar -->
+
+                </div>
+            </div>
+        </div>
+        <!-- endcontent -->
+        <!-- footer -->
+        <div w3-include-html="footer.html"></div>
+
+        <!-- end footer -->
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./assets/js/news.js"></script>
+    <!-- link js slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+    <!-- slick slider blog single slide -->
+    <script>
+        $('.blog-single-slide').slick({
+            slidesToShow: 2,
+            // autoplay: true,
+            // autoplaySpeed: 1500,
+            arrows: true,
+            dots: false,
+            Accessibility: true,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    arrows: true,
+                    slidesToShow: 1
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    arrows: true,
+                    slidesToShow: 1
+                }
+            }]
+        });
+    </script>
+    <!-- end slick slide blog single slide -->
+    <script>
+        includeHTML();
+    </script>
+
+</body>
+
+
+</html>

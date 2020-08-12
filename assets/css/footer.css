@@ -1,0 +1,164 @@
+/* footer */
+
+.footer {
+    background-image: url('../img/ft_bg_img.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .footer__top {
+    background-color: black;
+    opacity: 0.7;
+    padding-top: 4.5rem;
+    padding-bottom: 8.5rem;
+}
+
+.footer .footer__top .footet__content .footer__content-img {
+    width: 100%;
+}
+
+.footer__top .footer__content .footer__text {
+    padding-top: 3rem;
+}
+
+.footer__top .footer__content .footer__text .footer__title {
+    display: flex;
+    align-items: center;
+}
+
+.footer__content .footer__text .footer__title .fa-2x {
+    color: white;
+}
+
+.footer__content .footer__text .footer__title span {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.footer__content .footer__text .footer__title a {
+    color: whitesmoke;
+}
+
+.footer__content .footer__text .footer__title a:hover {
+    text-decoration: none;
+}
+
+.footer__content .footer__text .footer__title a:hover span {
+    color: #C89551;
+}
+
+.footer__content .footer__menu-list .menu-list {
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+.footer__content .footer__menu-list h3 {
+    color: white;
+    font-weight: 700;
+    padding-bottom: 2rem;
+    white-space: nowrap;
+}
+
+.footer__content .footer__menu-list .menu-list li {
+    list-style-type: none;
+    line-height: 3.4rem;
+}
+
+.footer__content .footer__menu-list .menu-list li a {
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.footer__content .footer__menu-list .menu-list li a:hover {
+    color: #C89551;
+    text-decoration: none;
+}
+
+.footer__content .footer__menu-list .menu-list-icon {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3.3rem;
+}
+
+.footer__content .footer__menu-list .menu-list-icon .fa-2x {
+    color: white;
+}
+
+.footer__content .footer__menu-list .menu-list-icon a:hover .face {
+    color: #4267B2;
+}
+
+.footer__content .footer__menu-list .menu-list-icon a:hover .insta {
+    color: #4267B2;
+}
+
+.footer__content .footer__menu-list .menu-list-icon a:hover .youtube {
+    color: #FF0000;
+}
+
+.footer__content .footer__menu-list .menu-list-icon a:hover .twitter {
+    color: #537bcc;
+}
+
+.footer__content .footer__menu-list .menu-list-icon a:hover .ggplus {
+    color: #FF0000;
+}
+
+.menu-list-button {
+    display: flex;
+    width: 100%;
+}
+
+.menu-list-button input {
+    width: 87%;
+    height: 4rem;
+    border: 0px;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    border-radius: 3px 0 0 3px;
+}
+
+.menu-list-button button {
+    width: 13%;
+    height: 4rem;
+    border: 0px;
+    border-radius: 0 3px 3px 0;
+    background-color: #C89551;
+    color: white;
+}
+
+.menu-list-button button:hover {
+    background-color: #a0774e;
+}
+
+
+/* footer bottom */
+
+.footer__bottom {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.footer .footer__bottom span {
+    font-size: 1.5rem;
+    color: rgb(240, 240, 240);
+}
+
+.footer .footer__bottom a {
+    color: whitesmoke;
+}
+
+.footer .footer__bottom a:hover {
+    color: #a0774e;
+    text-decoration: none;
+}
+
+
+/* end footer */

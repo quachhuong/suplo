@@ -1,0 +1,1270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>workshop</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <!-- link css slick slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+
+    <script>
+        // menu
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- modal -->
+        <div id="popup-subscribe" class="popup">
+            <!-- Modal content -->
+            <div id="popup-modal" class="popup-content  animate down">
+                <span class="close-popup"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <div class="grid">
+                    <div class="grid__item push--large--one-half large--six-twelfths medium--one-whole small--one-whole">
+                        <div class="popup-wrapper">
+                            <div class="popup-title">
+                                ĐĂNG KÝ NHẬN TIN NGAY HÔM NAY
+                            </div>
+                            <div class="popup-desc">
+                                Suplo hứa sẽ không gửi những mail với nội dung không quan trọng hoặc spam. Các bạn là người đầu tiên biết được về:
+                            </div>
+                            <div class="popup-list">
+                                <ul class="no-bullets">
+                                    <li>
+                                        Các sản phẩm khuyến mại với mức giá không thể thấp hơn.
+                                    </li>
+                                    <li>
+                                        Tin tức mới nhất về các sản phẩm mới, sản phẩm hot, flash sale, hot deal, ...
+                                    </li>
+                                    <li>
+                                        Các sản phẩm khuyến mại với mức giá không thể thấp hơn.
+                                    </li>
+                                    <li>
+                                        Tin tức mới nhất về các sản phẩm mới, sản phẩm hot, flash sale, hot deal, ...
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="popup-form">
+                                <div class="form-desc">
+                                    Đăng ký:
+                                </div>
+
+
+                                <form accept-charset='UTF-8' action='/account/contact' class='contact-form' method='post'>
+                                    <input name='form_type' type='hidden' value='customer'>
+                                    <input name='utf8' type='hidden' value='✓'>
+
+
+
+                                    <div class="input-group">
+                                        <input type="email" value="" placeholder="Nhập email của bạn..." name="contact[email]" id="Email" class="input-group-field" aria-label="email@example.com">
+                                        <input type="hidden" name="contact[tags]" value="newsletter">
+                                        <button type="submit" name="subscribe" id="subscribe" value="GỬI">Đăng ký</button>
+
+                                        <a href="https://www.facebook.com/SuploTeam/" class="popup-social-network" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+
+
+                                        <a href="https://plus.google.com/" class="popup-social-network" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+
+
+                                        <a href="https://www.instagram.com/" class="popup-social-network" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+
+                                        <a href="https://twitter.com/" class="popup-social-network" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+
+                                        <a href="https://www.youtube.com/" class="popup-social-network" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+
+                                    </div>
+
+
+                                    <input id='4f92842e0c5c44279536608ebacc7e26' name='g-recaptcha-response' type='hidden'>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal -->
+        <!-- header -->
+        <!-- header slider -->
+        <div class="header">
+            <div class="header__slider">
+
+                <div class="slider-item">
+
+                    <img src="assets/img/slide1.webp" alt="" class="imgslider">
+
+                    <div class="slide-content text-center">
+                        <div>
+                            <div class="slide-bold-text">
+                                KHUYẾN MÃI LỚN
+                            </div>
+                            <div class="slide-light-text medium--hide small--hide">
+                                (giảm tới 50% tất cả các mặt hàng trong dịp đặc biệt nhằm tri ân khách hàng đã ủng hộ các sản phẩm của chúng tôi)
+                            </div>
+                            <div class="slide-btn">
+
+                                <a href="/collections/all" class="slide-btn1">Xem thêm</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slider-item">
+
+                    <img src="./assets/img/slide2.webp" alt="" class="imgslider">
+
+                    <div class="slide-content text-center">
+                        <div>
+                            <div class="slide-bold-text">
+                                THIẾT KẾ ẤN TƯỢNG, ĐỘC ĐÁO
+                            </div>
+                            <div class="slide-light-text medium--hide small--hide">
+                                Chúng tôi mang đến những thiết kế độc đáo cho không gian sông của bạn thêm mới mẻ
+                            </div>
+                            <div class="slide-btn">
+
+                                <a href="/collections/all" class="slide-btn1">Xem thêm</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slider-item">
+
+                    <img src="./assets/img/slide3.webp" alt="" class="imgslider">
+
+                    <div class="slide-content text-center">
+                        <div>
+                            <div class="slide-bold-text">
+                                SỰ KẾT HỢP MỚI MẺ
+                            </div>
+                            <div class="slide-light-text medium--hide small--hide">
+                                Với những sáng tạo không ngừng, chúng tôi luôn kết hợp các sản phẩm đẹp mắt, phù hợp và ấn tượng
+                            </div>
+                            <div class="slide-btn">
+
+                                <a href="/collections/all" class="slide-btn1">Xem thêm</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end header slider -->
+        <div w3-include-html="menu.html"></div>
+        <!-- end header -->
+
+        <!-- content -->
+        <div class="content">
+
+            <!-- content service -->
+            <div class="content__service">
+                <div class="content__service-inner">
+                    <div class="container">
+                        <div class="inner">
+                            <div class="inner-item">
+                                <div class="item-service">
+                                    <div class="service-icon">
+                                        <i class="fa fa-share " aria-hidden="true"></i>
+                                    </div>
+                                    <div class="service-title">
+                                        Phương thức đổi trả
+                                    </div>
+                                    <div class="service-desc">
+                                        Cam kết đổi trả trong vòng 30 ngày đối với các sản phẩm không đúng yêu cầu của khách hàng
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner-item">
+                                <div class="item-service">
+                                    <div class="service-icon">
+                                        <i class="fa fa-plane " aria-hidden="true"></i>
+                                    </div>
+                                    <div class="service-title">
+                                        Giao hàng trên toàn quốc
+                                    </div>
+                                    <div class="service-desc">
+                                        Chúng tôi nhận giao hàng trên toàn quốc đối với các sản phẩm tại cửa hàng
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner-item">
+                                <div class="item-service">
+                                    <div class="service-icon">
+                                        <i class="fa fa-headphones " aria-hidden="true"></i>
+                                    </div>
+                                    <div class="service-title">
+                                        Hỗ trợ trực tuyến 24/7
+                                    </div>
+                                    <div class="service-desc">
+                                        Luôn sẵn sàng hỗ trợ 24/7. Mọi thắc mắc vui lòng liên hệ tới số hotline : <a href="tel:0123456789">0123456789</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end content service -->
+
+            <!-- content  collection -->
+
+            <div class="content__collection">
+                <div class="container">
+                    <div class="row">
+                        <!-- collection 1 -->
+                        <div class="col-lg-6 col-md-6 padding">
+                            <div class="collection__component">
+                                <div class="col-lg-6 padding-img">
+                                    <img src="./assets/img/sango.webp" class="collection-img" alt="">
+                                </div>
+                                <div class="col-lg-6 padding">
+                                    <div class="collection__text">
+                                        <h2><a href="#">NỘI THẤT GỖ</a></h2>
+                                        <a href="#"><button>Xem thêm</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- collection 2 -->
+                        <div class="col-lg-6 col-md-6 padding">
+                            <div class="collection__component">
+                                <div class="col-lg-6 padding-img">
+                                    <img src="./assets/img/den.webp" class="collection-img" alt="">
+                                </div>
+                                <div class="col-lg-6 padding">
+                                    <div class="collection__text">
+                                        <h2><a href="#">ĐỒ TRANG TRÍ</a></h2>
+                                        <a href="#"><button>Xem thêm</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- collection 3 -->
+                        <div class="col-lg-6 col-md-6 padding">
+                            <div class="collection__component">
+
+                                <div class="col-lg-6 padding">
+                                    <div class="collection__text">
+                                        <h2><a href="#">ĐỒ LƯU NIỆM</a></h2>
+                                        <a href="#"><button>Xem thêm</button></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 padding-img">
+                                    <img src="./assets/img/doluuniem.webp" class="collection-img" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- collection 4 -->
+                        <div class="col-lg-6 col-md-6 padding">
+                            <div class="collection__component">
+
+                                <div class="col-lg-6 padding">
+                                    <div class="collection__text">
+                                        <h2><a href="#">ĐỒ DÙNG BẰNG GỖ</a></h2>
+                                        <a href="#"><button>Xem thêm</button></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 padding-img">
+                                    <img src="./assets/img/cay.webp" class="collection-img" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end content collection -->
+
+            <!-- content discount -->
+            <div class="content__discount">
+                <div class="container">
+                    <div class="discount__text ">
+                        <h1>SẢN PHẨM KHUYẾN MẠI</h1>
+                        <hr class="line">
+                    </div>
+
+                    <div class="discount__bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="discount-slide text-center">
+                                        <!-- slude1 -->
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/ngua-go-tre-em">
+                                                    <img id="1012572882" class="lazyload" src="./assets/img/nguago.jpg" alt="Ngựa gỗ trẻ em" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" disabled class="btnAddToCart add-to-cart medium--hide small--hide" data-id=""><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/ngua-go-tre-em"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" disabled class="btnBuyNow buy-now medium--hide small--hide" data-id=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/ngua-go-tre-em">Ngựa gỗ trẻ em</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">2,700,000₫</span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- slide2 -->
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/coc-uong-nuoc">
+                                                    <img id="1012358396" class="lazyload" src="./assets/img/coc.webp" alt="Cốc uống nước" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide" data-id="1023923657"><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/coc-uong-nuoc"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide" data-id="1023923657"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                    <div class="tag-saleoff text-center">
+                                                        -33%
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/coc-uong-nuoc">Cốc uống nước</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">200,000₫</span>
+
+                                                    <span class="original-price"><s>300,000₫</s></span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- slide3 -->
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/de-lot-ly">
+                                                    <img id="1012742931" class="lazyload" src="./assets/img/delotly.jpg" alt="Đế lót ly" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" disabled class="btnAddToCart add-to-cart medium--hide small--hide" data-id=""><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/de-lot-ly"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" disabled class="btnBuyNow buy-now medium--hide small--hide" data-id=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/de-lot-ly">Đế lót ly</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">50,000₫</span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- slide4 -->
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/dong-ho-go-4-so">
+                                                    <img id="1012357532" class="lazyload" src="./assets/img/dongho4so.jpg" alt="Đồng hồ gỗ 4 số" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide" data-id="1023921882"><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/dong-ho-go-4-so"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide" data-id="1023921882"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                    <div class="tag-saleoff text-center">
+                                                        -14%
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/dong-ho-go-4-so">Đồng hồ gỗ 4 số</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">300,000₫</span>
+
+                                                    <span class="original-price"><s>350,000₫</s></span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- slide 5 -->
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/chau-cay-de-ban">
+                                                    <img id="1012742954" class="lazyload" src="./assets/img/chaucaydeban.webp" data-src="//product.hstatic.net/1000263110/product/suplo-04-1_large.jpg" alt="Chậu cây để bàn" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide" data-id="1024811836"><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/chau-cay-de-ban"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide" data-id="1024811836"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info text-center">
+                                                <div class="product-title">
+                                                    <a href="/products/chau-cay-de-ban">Chậu cây để bàn</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">70,000₫</span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 padding">
+                                    <div class="bottom__discount text-center">
+                                        <h1>KHUYẾN MẠI LỚN</h1>
+                                        <p>(giảm tới 50% nhân dịp năm mới)</p>
+                                        <div id="clock" class="divclock">
+                                            <div>
+                                                <span class="days">
+                                            </span>
+                                                <div class="smalltext">
+                                                    Ngày
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="hours">
+                                            </span>
+                                                <div class="smalltext">
+                                                    Giờ
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="minutes">
+                                            </span>
+                                                <div class="smalltext">
+                                                    Phút
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="seconds">
+                                            </span>
+                                                <div class="smalltext">
+                                                    Giây
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#"><button>Xem thêm</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- end content discount -->
+
+            <!-- content shop info -->
+            <div class="content__shop-info">
+                <div class="container">
+                    <div class="shop-info">
+                        <div class="row">
+                            <div class="col-lg-4 padding shop__open">
+                                <div class="open">
+                                    <div class="open__detail">
+                                        <p>GIỜ MỞ CỬA</p>
+                                        <ul>
+                                            <li>Thứ 2 - Thứ 6 : 7h - 22h</li>
+                                            <li>Thứ 7 - CN : 9h - 18h</li>
+                                            <li>Ngày lễ : 9h - 18h</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="shop__info">
+                                    <div class="shop__info--text text-center">
+                                        <h1>ĐÁNH GIÁ CỦA KHÁCH HÀNG</h1>
+                                        <hr class="line">
+                                    </div>
+                                    <div class="slide">
+                                        <div class="shop__slide " id="slide">
+                                            <!-- slide 1 -->
+                                            <div>
+                                                <div class="item-img ">
+                                                    <img src="./assets/img/user_2_medium.webp" />
+                                                </div>
+                                                <div class="item-name text-center">
+                                                    ANH TRẦN THANH TÙNG - HÀ NỘI
+                                                </div>
+                                                <div class="item-text">
+                                                    <p>“Tôi thực sự hài lòng với chất lượng cũng như mức giá của các sản phẩm mà Suplo cung cấp. Nhất định tôi sẽ còn quay lại Suplo nhiều lần nữa. Chúc cho Suplo sẽ ngày càng phát triển mạnh mẽ hơn.”</p>
+
+                                                </div>
+                                            </div>
+                                            <!-- slide 2 -->
+                                            <div>
+                                                <div class="item-img ">
+                                                    <img src="./assets/img/user_3_medium.webp" />
+                                                </div>
+                                                <div class="item-name text-center">
+                                                    CHỊ NGUYỄN THANH BÌNH - HÀ NỘI
+                                                </div>
+                                                <div class="item-text">
+                                                    <p>“Tôi thực sự hài lòng với chất lượng cũng như mức giá của các sản phẩm mà Suplo cung cấp. Nhất định tôi sẽ còn quay lại Suplo nhiều lần nữa. Chúc cho Suplo sẽ ngày càng phát triển mạnh mẽ hơn.”</p>
+
+                                                </div>
+                                            </div>
+                                            <!-- slide 3 -->
+                                            <div>
+                                                <div class="item-img ">
+                                                    <img src="./assets/img/user_1_medium.webp" />
+                                                </div>
+                                                <div class="item-name text-center">
+                                                    CHỊ BÙI MINH HÀ - HÒA BÌNH
+                                                </div>
+                                                <div class="item-text">
+                                                    <p>“Tôi thực sự hài lòng với chất lượng cũng như mức giá của các sản phẩm mà Suplo cung cấp. Nhất định tôi sẽ còn quay lại Suplo nhiều lần nữa. Chúc cho Suplo sẽ ngày càng phát triển mạnh mẽ hơn.”</p>
+
+                                                </div>
+                                            </div>
+                                            <!-- slide 4 -->
+                                            <div>
+                                                <div class="item-img">
+                                                    <img src="./assets/img/user_4_medium.webp" />
+                                                </div>
+                                                <div class="item-name text-center">
+                                                    ANH PHẠM THẾ LỢI - VĨNH PHÚC
+                                                </div>
+                                                <div class="item-text">
+                                                    <p>“Tôi thực sự hài lòng với chất lượng cũng như mức giá của các sản phẩm mà Suplo cung cấp. Nhất định tôi sẽ còn quay lại Suplo nhiều lần nữa. Chúc cho Suplo sẽ ngày càng phát triển mạnh mẽ hơn.”</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end content shop info -->
+
+            <!-- content  featured product-->
+            <div class="content__featured-product">
+                <div class="container">
+                    <div class="featured-product">
+                        <div class="section-title text-center">
+                            <h1>Sản phẩm nổi bật</h1>
+                        </div>
+                        <div class="section-tab text-center">
+                            <div class="tab">
+                                <button class="tablinks current" data-tab="Đồ-lưu-niệm">Đồ lưu niệm
+                                </button>
+
+                                <button class="tablinks" data-tab="Nội-thất">Nội thất
+                                </button>
+
+                                <button class="tablinks" data-tab="Đồ-trang-trí">Đồ trang trí
+                                </button>
+                            </div>
+
+                            <!-- đồ lưu niệm -->
+                            <div id="Đồ-lưu-niệm" class="tabcontent current text-center">
+                                <div class="row">
+                                    <div class="col-lg-3">
+
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/chau-cay-de-ban">
+                                                    <img id="1012742954" class="lazyload" src="./assets/img/chaucaydeban.webp" data-src="//product.hstatic.net/1000263110/product/suplo-04-1_large.jpg" alt="Chậu cây để bàn" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/chau-cay-de-ban"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/chau-cay-de-ban">Chậu cây để bàn</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">70,000₫</span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/coc-uong-nuoc">
+                                                    <img id="1012358396" class="lazyload" src="./assets/img/coc.webp" alt="Cốc uống nước" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide" data-id="1023923657"><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/coc-uong-nuoc"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide" data-id="1023923657"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                    <div class="tag-saleoff text-center">
+                                                        -33%
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/coc-uong-nuoc">Cốc uống nước</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">200,000₫</span>
+
+                                                    <span class="original-price"><s>300,000₫</s></span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/de-lot-ly">
+                                                    <img id="1012742931" class="lazyload" src="./assets/img/delotly.jpg" alt="Đế lót ly" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" disabled class="btnAddToCart add-to-cart medium--hide small--hide" data-id=""><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/de-lot-ly"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" disabled class="btnBuyNow buy-now medium--hide small--hide" data-id=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/de-lot-ly">Đế lót ly</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">50,000₫</span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/dong-ho-go-4-so">
+                                                    <img id="1012357532" class="lazyload" src="./assets/img/dongho4so.jpg" alt="Đồng hồ gỗ 4 số" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide" data-id="1023921882"><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/dong-ho-go-4-so"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide" data-id="1023921882"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                    <div class="tag-saleoff text-center">
+                                                        -14%
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/dong-ho-go-4-so">Đồng hồ gỗ 4 số</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">300,000₫</span>
+
+                                                    <span class="original-price"><s>350,000₫</s></span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/dong-ho-tinh-yeu">
+                                                    <img id="1012572971" class="lazyload" src="./assets/img/dongholove.jpg" alt="Đồng hồ tình yêu" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide" data-id="1024414910"><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/dong-ho-tinh-yeu"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide" data-id="1024414910"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                    <div class="tag-saleoff text-center">
+                                                        -21%
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/dong-ho-tinh-yeu">Đồng hồ tình yêu</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">700,000₫</span>
+
+                                                    <span class="original-price"><s>890,000₫</s></span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/ghe-go-4-chan">
+                                                    <img id="1012743153" class="lazyload" src="./assets/img/ghego4chan.jpg" alt="Ghế gỗ 4 chân" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide" data-id="1024812216"><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/ghe-go-4-chan"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide" data-id="1024812216"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                    <div class="tag-saleoff text-center">
+                                                        -20%
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/ghe-go-4-chan">Ghế gỗ 4 chân</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">200,000₫</span>
+
+                                                    <span class="original-price"><s>250,000₫</s></span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/gia-de-ruou-vang">
+                                                    <img id="1012572819" class="lazyload" src="./assets/img/giảuor.jpg" alt="Gía để rượu vang" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide" data-id="1024413832"><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/gia-de-ruou-vang"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide" data-id="1024413832"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/gia-de-ruou-vang">Gía để rượu vang</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">150,000₫</span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <div class="product-item">
+                                            <div class="product-image">
+                                                <a href="/products/ngua-go-tre-em">
+                                                    <img id="1012572882" class="lazyload" src="./assets/img/nguago.jpg" alt="Ngựa gỗ trẻ em" />
+                                                    <div class="product-overlay">
+
+                                                    </div>
+                                                </a>
+                                                <div class="product-actions text-center clearfix">
+                                                    <div>
+                                                        <button type="button" disabled class="btnAddToCart add-to-cart medium--hide small--hide" data-id=""><i class="fa fa-cart-plus" aria-hidden="true"></i><span> </span></button>
+                                                        <button type="button" class="btnQuickView quick-view medium--hide small--hide" data-handle="/products/ngua-go-tre-em"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                        <button type="button" disabled class="btnBuyNow buy-now medium--hide small--hide" data-id=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-tags">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="product-info">
+                                                <div class="product-title">
+                                                    <a href="/products/ngua-go-tre-em">Ngựa gỗ trẻ em</a>
+                                                </div>
+                                                <div class="product-price clearfix">
+                                                    <span class="current-price">2,700,000₫</span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end content featured product  -->
+
+            <!-- content-articles -->
+            <div class="content__article">
+                <div class="container">
+                    <div class="article">
+                        <div class="section-title text-center">
+                            <h1>Tin tức nổi bật</h1>
+                        </div>
+                        <div class="blog-single-slide">
+                            <div class="item">
+
+                                <div class="article-item">
+                                    <div class="article">
+                                        <div class="article-img">
+                                            <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide6.webp" alt=""></a>
+                                            <div class="article-date text-center">
+                                                <div>12</div>
+                                                <span>04/18</span>
+                                            </div>
+                                        </div>
+                                        <div class="article-info text-center">
+                                            <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                            <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                            <div class="article-title text-center">
+                                                <a href="http://"> ĐI TÌM GỖ ĐÓNG TỦ VẠN NĂNG GHÉP ĐƯỢC MUỘN VẠN KIỂU</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="article-item">
+                                    <div class="article">
+                                        <div class="article-img">
+                                            <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide1.webp" alt=""></a>
+                                            <div class="article-date text-center">
+                                                <div>12</div>
+                                                <span>04/18</span>
+                                            </div>
+                                        </div>
+                                        <div class="article-info text-center">
+                                            <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                            <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                            <div class="article-title text-center">
+                                                <a href="http://"> Kiểu tủ gương vừa xinh vừa tiện cho nhà chật hẹp</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="article-item">
+                                    <div class="article">
+                                        <div class="article-img">
+                                            <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide2.webp" alt=""></a>
+                                            <div class="article-date text-center">
+                                                <div>12</div>
+                                                <span>04/18</span>
+                                            </div>
+                                        </div>
+                                        <div class="article-info text-center">
+                                            <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                            <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                            <div class="article-title text-center">
+                                                <a href="http://"> 15 đồ nội thất tái chế từ gỗ thừa đem tới vẻ đẹp vintage cho ngôi nhà</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="article-item">
+                                    <div class="article">
+                                        <div class="article-img">
+                                            <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide5.jpg" alt=""></a>
+                                            <div class="article-date text-center">
+                                                <div>12</div>
+                                                <span>04/18</span>
+                                            </div>
+                                        </div>
+                                        <div class="article-info text-center">
+                                            <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                            <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                            <div class="article-title text-center">
+                                                <a href="http://"> Móc treo đồ đàn accordion treo đâu cũng thành xinh</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="article-item">
+                                    <div class="article">
+                                        <div class="article-img">
+                                            <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide3.webp" alt=""></a>
+                                            <div class="article-date text-center">
+                                                <div>12</div>
+                                                <span>04/18</span>
+                                            </div>
+                                        </div>
+                                        <div class="article-info text-center">
+                                            <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                            <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                            <div class="article-title text-center">
+                                                <a href="http://"> Căn hộ ấm áp nhờ biết cách sử dụng nội thất gỗ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="article-item">
+                                    <div class="article">
+                                        <div class="article-img">
+                                            <a href="http://"> <img class=" article-item-img" src="./assets/img/newslide4.jpg" alt=""></a>
+                                            <div class="article-date text-center">
+                                                <div>12</div>
+                                                <span>04/18</span>
+                                            </div>
+                                        </div>
+                                        <div class="article-info text-center">
+                                            <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                            <span><i class="fa fa-commenting" aria-hidden="true"></i> 0</span>
+                                            <div class="article-title text-center">
+                                                <a href="http://">Người dân thay phiên nhau 'canh gác' 2 gốc cây sưa tiền tỷ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end content articles -->
+
+            <!-- content subscribe -->
+            <div class="content__subscribe ">
+                <div class="container">
+                    <div class="subscribe ">
+                        <div class="row">
+                            <div class="col-md-2 col-lg-2"></div>
+                            <div class=" col-md-8 col-lg-8 subscribe-content text-center">
+                                <div class="title">
+                                    <h1>ĐĂNG KÝ NHẬN TIN</h1>
+                                    <h4>Đăng ký với chúng tôi để nhận thông tin mới nhất về khuyến mãi, các sản phẩm mới và tin tức bạn cần. Nhập email tại đây</h4>
+                                    <div class="title-button">
+                                        <input type="email" name="" id="" placeholder="Email của bạn">
+                                        <button type="submit">ĐĂNG KÝ</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-lg-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end content subscribe -->
+        </div>
+        <!-- end content -->
+
+        <div w3-include-html="footer.html"></div>
+        <div class='lentop'>
+            <div>
+                <img src='https://1.bp.blogspot.com/-k6sikOdzFXQ/VwqCKDosmEI/AAAAAAAAKxE/nLxLhkTIO6o3iE5ZWmtxo2bf4QHdzPQNQ/s1600/top.png' />
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- javascript -->
+    <script src="./assets/js/index.js"></script>
+    <!-- link js slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+
+    <!-- header slider -->
+    <script>
+        $('.header__slider').slick({
+            slidesToShow: 1,
+            arrows: false,
+            dots: true
+        });
+    </script>
+    <!-- end header slide -->
+    <!-- slick slider shop info -->
+    <script>
+        $('.shop__slide').slick({
+            slidesToShow: 1,
+            arrows: false,
+            dots: true
+        });
+    </script>
+    <!-- end slick slide shop info -->
+    <!-- slick slide discount -->
+    <script>
+        $('.discount-slide').slick({
+            slidesToShow: 2,
+            arrows: true,
+            dots: false,
+            Accessibility: true,
+            responsive: [{
+
+                breakpoint: 480,
+                settings: {
+                    arrows: true,
+                    slidesToShow: 1
+                }
+            }]
+        });
+    </script>
+    <!-- end slick slide discount  -->
+    <!-- slick slide content article -->
+    <script>
+        $('.blog-single-slide').slick({
+            slidesToShow: 3,
+            arrows: true,
+            dots: false,
+            Accessibility: true,
+            responsive: [{
+
+                breakpoint: 480,
+                settings: {
+                    arrows: true,
+                    slidesToShow: 1
+                }
+            }]
+        });
+    </script>
+    <!-- end slick slide content article -->
+    <!-- modal -->
+    <script>
+        var modal = document.getElementById('popup-subscribe');
+        var span = document.getElementsByClassName("close-popup")[0];
+
+        var btn = document.getElementById("popup-btn");
+        btn.onclick = function() {
+            modal.style.display = "block";
+            setTimeout(function() {
+                $('#popup-modal').addClass('show');
+            }, 500)
+        }
+        span.onclick = function() {
+            hidePopupSub(modal)
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                hidePopupSub(modal)
+            }
+        }
+
+        function hidePopupSub(modal) {
+            $('#popup-modal').removeClass('show');
+            setTimeout(function() {
+                modal.style.display = "none";
+            }, 500)
+        }
+    </script>
+    <!-- end modal -->
+    <script>
+        includeHTML();
+    </script>
+
+</body>
+
+</html>

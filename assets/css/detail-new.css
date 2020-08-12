@@ -1,0 +1,330 @@
+.wrapper {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto Slab', serif !important;
+}
+
+.float-right {
+    float: right;
+}
+
+.header {
+    background-attachment: fixed;
+    background-image: url('../img/news_bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .header--top {
+    background-color: #13100E;
+    padding-bottom: 10px;
+}
+
+.header .header__title {
+    padding: 12rem 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header .header__title h1 {
+    color: white;
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+}
+
+.header .header__title p {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.header .header__title a {
+    color: white;
+}
+
+.header .header__title a:hover {
+    color: #C89551;
+    text-decoration: none;
+}
+
+.detail-new {
+    padding: 5rem 0;
+    width: 100%;
+    height: 100%;
+}
+
+.detail-new .detail {
+    height: 100%;
+}
+
+
+/* content side bar */
+
+.detail-new .content__sidebar {
+    width: 25%;
+    float: left;
+}
+
+.detail-new .content__sidebar .list-categories {
+    border: 1px solid #E6E6E6;
+    margin-bottom: 2rem;
+}
+
+.blog-sb-title h4 {
+    width: 100%;
+    background-color: #C89551;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-weight: 700;
+}
+
+.content__sidebar .list-categories .list li {
+    list-style: none;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.content__sidebar .list-categories .list li a {
+    color: black;
+    position: relative;
+}
+
+.content__sidebar .list-categories .list li a:before {
+    color: black;
+    height: 1px;
+    content: "";
+    width: 0px;
+    bottom: 0px;
+    background-color: #C89551;
+    left: 0px;
+    position: absolute;
+    transition: 1s;
+}
+
+.content__sidebar .list-categories .list li a:hover {
+    color: #C89551;
+    text-decoration: none;
+}
+
+.content__sidebar .list-categories .list li a:hover:before {
+    width: 100%;
+}
+
+.detail-new .content__sidebar .all-tags {
+    border: 1px solid #E6E6E6;
+    margin-bottom: 2rem;
+}
+
+.content__content .content__sidebar .all-tags .blog_tag a {
+    color: black;
+    padding-right: 1rem;
+    font-size: 1.4rem;
+}
+
+.content__content .content__sidebar .all-tags .blog_tag a:hover {
+    color: #C89551;
+    text-decoration: none;
+}
+
+.content__content .content__sidebar .all-tags .blog_tag {
+    padding: 1.5rem;
+}
+
+.content__content .content__sidebar .blog-banner .blog-banner-img {
+    width: 100%;
+    transition: 1s ease;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.content__content .content__sidebar .blog-banner .blog-banner-img:hover {
+    transform: scale(1.1, 1.1);
+    transition: 1s ease;
+}
+
+.content__content .content__sidebar .blog-banner {
+    width: 100%;
+    transition: 1s ease;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* end content side bar */
+
+
+/* content article */
+
+.detail-new .content__blog {
+    width: 75%;
+    padding-left: 3rem;
+}
+
+.blog-content .article-content .article-header {
+    padding-bottom: 3rem;
+}
+
+.blog-content .article-content .article-header h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+}
+
+.blog-content .article-content .article-header .grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-content .article-content .article-header .grid .grid-item span {
+    padding-right: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.blog-content .article-content .article-header .grid .grid-item button {
+    padding: 3px 1rem;
+    background-color: #1877F2;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+.blog-content .article-content .article-line {
+    padding: 15px 15px 0px 15px;
+    margin-bottom: 30px;
+    background: #e1e1e1;
+}
+
+.blog-content .article-content .article-body p {
+    font-size: 1.4rem;
+}
+
+.blog-content .article-content .article-body .body-view img {
+    width: 100%;
+}
+
+.blog-content .fbcomment {
+    padding: 3rem 0;
+}
+
+.blog-content .fbcomment .comment .sort-comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-content .fbcomment .comment .sort-comment .sort-left {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.blog-content .fbcomment .comment .sort-comment .sort-right {
+    font-size: 1.4rem;
+}
+
+.blog-content .fbcomment .comment .comment-comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-content .fbcomment .comment .comment-comment .comment-left img {
+    width: 60%;
+}
+
+.blog-content .fbcomment .comment .comment-comment .comment-right {
+    height: 50px;
+    width: 100%;
+}
+
+.blog-content .fbcomment .comment .comment-comment .comment-right input {
+    height: 50px;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.blog-content .fbcomment .comment span {
+    color: #3A559B;
+    font-size: 1.2rem;
+}
+
+.blog-content .fbcomment .comment span a {
+    color: #3A559B;
+}
+
+.article-related {
+    padding-bottom: 3rem;
+}
+
+.article-related .related h3 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.article-related .related ul {
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+}
+
+.article-related .related ul li a {
+    color: black;
+    position: relative;
+}
+
+.article-related .related ul li a::before {
+    color: black;
+    height: 1px;
+    content: "";
+    width: 0px;
+    bottom: 0px;
+    background-color: #C89551;
+    left: 0px;
+    position: absolute;
+    transition: 1s;
+}
+
+.article-related .related ul li a:hover {
+    color: #C89551;
+    text-decoration: none;
+}
+
+.article-related .related ul li a:hover::before {
+    width: 100%;
+}
+
+
+/* end content article */
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .medium--one-whole {
+        width: 100% !important;
+    }
+    .detail-new .content__blog {
+        width: 100%;
+        padding-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .small--one-whole {
+        width: 100% !important;
+    }
+    .detail-new .content__blog {
+        width: 100%;
+        padding-left: 0px;
+    }
+    .header .header__top {
+        display: none;
+    }
+}

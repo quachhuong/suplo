@@ -1,0 +1,90 @@
+.wrapper {
+    box-sizing: border-box;
+}
+
+.margin {
+    margin: 0 auto;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.float-right {
+    float: right;
+}
+
+.header {
+    background-attachment: fixed;
+    background-image: url('../img/news_bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .header--top {
+    background-color: #13100E;
+    padding-bottom: 10px;
+}
+
+.header .header__title {
+    padding: 12rem 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header .header__title h1 {
+    color: white;
+    font-weight: 700;
+}
+
+.header .header__title p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.header .header__title a {
+    color: white;
+}
+
+.header .header__title a:hover {
+    color: #C89551;
+    text-decoration: none;
+}
+
+.content .content__sign-up {
+    padding: 5rem 0 10rem 0;
+}
+
+.content .content__sign-up .form-sign-up input {
+    width: 100%;
+    margin: 6px 0;
+    border-radius: 5px;
+    padding: 1.4rem 1rem;
+    color: #A4A4A4;
+    border: 1px solid #E6E6E6;
+    font-size: 1.4rem;
+}
+
+.content .content__sign-up .form-sign-up button {
+    width: 100%;
+    color: white;
+    background-color: #C89551;
+    margin: 6px 0;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    border: 0px;
+    padding: 1rem 1.4rem;
+}
+
+.content .content__sign-up p {
+    font-size: 1.4rem;
+}
+
+.content .content__sign-up a {
+    color: black;
+}
+
+.content .content__sign-up a:hover {
+    color: #C89551;
+    text-decoration: none;
+}
