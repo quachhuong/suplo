@@ -82,7 +82,7 @@ $(window).scroll(function() {
 // menu responsive
 // var menu = {
 //     init: function() {
-//         this.clickShowMenu('.humberger', '.menu-list', 'showMenu');
+//         this.clickShowMenu('.humberger', '.menu-list', 'showmenu');
 //     },
 //     clickShowMenu: function(button, header, classMenu) {
 //         var btn = document.querySelector(button);
@@ -93,6 +93,14 @@ $(window).scroll(function() {
 //     }
 // }
 // menu.init();
+// ==============menu click =================
+document.addEventListener('click', function() {
+    var x = document.getElementById('clickbar');
+    var menu = document.getElementById('menubar');
+    x.addEventListener('click', function() {
+        menu.classList.toggle('showmenu');
+    });
+});
 // tabcontent
 // $(document).ready(function() {
 

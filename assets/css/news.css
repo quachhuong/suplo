@@ -347,6 +347,32 @@ button:not(:disabled) {
 
 /* end content */
 
+.lentop {
+    display: none;
+    bottom: 10%;
+    right: 10px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+}
+
+.lentop div {
+    background: #DEBF97;
+    padding: 11px 12.5px;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3)
+}
+
+.lentop:hover div {
+    background: #C89551;
+    padding: 11px 12.5px;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3)
+}
+
+.lentop img {
+    width: 16px;
+    height: 16px;
+}
+
 @media only screen and (max-width: 768px) and (min-width: 481px) {
     .medium--one-whole {
         width: 100% !important;

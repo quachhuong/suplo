@@ -11,3 +11,12 @@ $(window).scroll(function() {
         $('.header__menu').removeClass('show navbar-fixed-top');
     }
 });
+$(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) $(".lentop").fadeIn();
+        else $(".lentop").fadeOut();
+    });
+    $(".lentop").click(function() {
+        $("body,html").animate({ scrollTop: 0 }, "slow");
+    });
+});
