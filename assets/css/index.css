@@ -1032,4 +1032,10 @@ button:not(:disabled) {
         max-width: 100%;
         flex-basis: 100%;
     }
+    .content__shop-info .shop__info .shop__slide {
+        padding: 0px;
+    }
+    .shop__info .shop__slide .slick-dots {
+        width: 100% !important;
+    }
 }
