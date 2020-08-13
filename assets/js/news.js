@@ -11,6 +11,7 @@ $(window).scroll(function() {
         $('.header__menu').removeClass('show navbar-fixed-top');
     }
 });
+// back to top
 $(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop() > 100) $(".lentop").fadeIn();

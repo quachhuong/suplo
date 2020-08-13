@@ -27,7 +27,6 @@ html {
 
 .header .header--top {
     background-color: #13100E;
-    padding-bottom: 10px;
 }
 
 .header .header__title {
@@ -60,20 +59,19 @@ html {
 .content {
     padding: 5rem 0;
     width: 100%;
-    height: 1200px;
+    /* height: 1200px; */
 }
 
 
 /* content side bar */
 
-.content .content__sidebar {
-    width: 25%;
-    float: left;
-}
-
 .content .content__sidebar .list-categories {
     border: 1px solid #E6E6E6;
     margin-bottom: 2rem;
+}
+
+.content .content__sidebar .list-categories .list {
+    padding-left: 0px;
 }
 
 .blog-sb-title h4 {
@@ -162,11 +160,6 @@ html {
 
 
 /* content blog */
-
-.content .content__blog {
-    width: 75%;
-    padding-left: 3rem;
-}
 
 .content__blog .blog-content .blog-single-item {
     margin-bottom: 30px;
@@ -383,7 +376,7 @@ button:not(:disabled) {
     }
     .content {
         width: 100%;
-        height: 2600px;
+        /* height: 2600px; */
     }
 }
 
@@ -397,7 +390,7 @@ button:not(:disabled) {
     }
     .content {
         width: 100%;
-        height: 2050px;
+        /* height: 2050px; */
     }
     .header .header__top {
         display: none;

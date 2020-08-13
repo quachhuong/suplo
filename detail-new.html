@@ -22,7 +22,40 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <script>
+        // menu
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
 
 </head>
 
@@ -149,194 +182,207 @@
             <div class="detail">
                 <div class="container">
                     <div class="content__content">
-                        <!-- content blog -->
-                        <div class="content__blog medium--one-whole small--one-whole float-right">
-                            <div class="blog-content ">
-                                <!-- article content -->
-                                <div class="article-content">
-                                    <div class="article-header">
-                                        <h2>Đi tìm gỗ đóng tủ vạn năng ghép được muôn vàn kiểu</h2>
-                                        <div class="grid">
-                                            <div class="grid-item">
-                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 12/04/19</span>
-                                                <span><i class="fa fa-commenting-o" aria-hidden="true"></i> 0</span>
-                                                <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                        <div class="row">
+                            <!-- content blog -->
+                            <div class="col-lg-9">
+                                <div class="content__blog medium--one-whole small--one-whole float-right">
+                                    <div class="blog-content ">
+                                        <!-- article content -->
+                                        <div class="article-content">
+                                            <div class="article-header">
+                                                <h2>Đi tìm gỗ đóng tủ vạn năng ghép được muôn vàn kiểu</h2>
+                                                <div class="grid">
+                                                    <div class="grid-item">
+                                                        <span><i class="fa fa-calendar" aria-hidden="true"></i> 12/04/19</span>
+                                                        <span><i class="fa fa-commenting-o" aria-hidden="true"></i> 0</span>
+                                                        <span><i class="fa fa-user" aria-hidden="true"></i> Suplo Wood</span>
+                                                    </div>
+                                                    <div class="grid-item">
+                                                        <button><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>  Thích 0</button>
+                                                        <button>Chia sẻ</button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="grid-item">
-                                                <button><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>  Thích 0</button>
-                                                <button>Chia sẻ</button>
+                                            <div class="article-line">
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="article-line">
-                                    </div>
-                                    <div class="article-body">
-                                        <p>Nhiều người luôn cho rằng, gỗ thừa là đồ bỏ đi nên thường hoang phí không đúng cách. Đã bao giờ bạn nghĩ đến giá treo đồ làm từ thùng rượu cũ hay bàn uống nước làm từ dát giường sẽ trông thế nào chưa? Chỉ cần óc
-                                            sáng tạo và một chút khéo léo thôi, bạn đã có thể biến "đồ đồng nát" thành những món đồ nội thất đậm chất vintage như 15 gợi ý dưới đây rồi đấy!</p>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view1.jpg" alt=""></a>
-                                            <div class="view-info">
-                                                <p>1. Thử ghép nhiều mảnh gỗ dài lại đi, bạn sẽ có ngay chiếc bàn ăn vừa cổ điển vừa sang trọng.</p>
-                                            </div>
-                                        </div>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view2.jpg" alt=""></a>
-                                            <div class="view-info">
-                                                <p>2. Song, nếu để tân trang phòng ngủ thì bạn hãy chọn gỗ sáng màu để tạo cảm giác thư thái nhé.</p>
-                                            </div>
-                                        </div>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view3.jpg" alt=""></a>
-                                            <div class="view-info">
-                                                <p>3. Đừng vội vứt miếng gỗ thừa này đi vì nó có thể biến thành đầu giường vừa hiện đại lại tối giản trong phòng ngủ của bạn.</p>
-                                            </div>
-                                        </div>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view4.jpg" alt=""></a>
-                                            <div class="view-info">
-                                                <p>4. Ai mà nghĩ thùng rượu cũ lại có thể biến thành giá đựng đồ gọn gàng thế này chứ?</p>
-                                            </div>
-                                        </div>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view5.jpg" alt=""></a>
-                                            <div class="view-info">
-                                                <p>5. Chỉ cần tỉ mỉ và khéo léo, bạn có thể biến dát giường thành sàn gỗ xinh xắn trong vườn nhà.</p>
-                                            </div>
-                                        </div>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view6.jpg" alt=""></a>
-                                            <div class="view-info">
-                                                <p>6. Lát tường bằng nhiều mảnh gỗ dài sẽ khiến gian nhà vừa ấm cúng lại mang đậm phong cách vintage đấy.</p>
-                                            </div>
-                                        </div>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view7.jpg" alt=""></a>
-                                            <div class="view-info">
-                                                <p>7. Đừng nghĩ xích đu thì phải diêm dúa công chúa, đôi khi sự tối giản cũng có sức hút đặc biệt.</p>
-                                            </div>
-                                        </div>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view8.jpg" alt=""></a>
-                                            <div class="view-info">
-                                                <p>8. Sao không tái sử dụng thùng rượu cũ và chế chúng thành bàn làm việc nhỏ xinh nhỉ?</p>
-                                            </div>
-                                        </div>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view9.jpg" alt=""></a>
-                                            <div class="view-info">
-                                                <p>9. Nếu được tận dụng đúng cách, chiếc dát giường ẩm mốc sẽ thành tấm bình phong kiêm giá treo tranh hữu hiệu.</p>
-                                            </div>
-                                        </div>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view10.jpg" alt=""></a>
-                                            <div class="view-info">
-                                                <p>10. Gian bếp nhà bạn sẽ không còn lộn xộn bởi đống xoong chảo nữa nếu được treo gọn gàng trên chiếc giá gỗ này.</p>
-                                            </div>
-                                        </div>
-                                        <div class="body-view">
-                                            <a href="http://"><img src="./assets/img/view11.jpg" alt=""></a>
+                                            <div class="article-body">
+                                                <p>Nhiều người luôn cho rằng, gỗ thừa là đồ bỏ đi nên thường hoang phí không đúng cách. Đã bao giờ bạn nghĩ đến giá treo đồ làm từ thùng rượu cũ hay bàn uống nước làm từ dát giường sẽ trông thế nào chưa? Chỉ
+                                                    cần óc sáng tạo và một chút khéo léo thôi, bạn đã có thể biến "đồ đồng nát" thành những món đồ nội thất đậm chất vintage như 15 gợi ý dưới đây rồi đấy!</p>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view1.jpg" alt=""></a>
+                                                    <div class="view-info">
+                                                        <p>1. Thử ghép nhiều mảnh gỗ dài lại đi, bạn sẽ có ngay chiếc bàn ăn vừa cổ điển vừa sang trọng.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view2.jpg" alt=""></a>
+                                                    <div class="view-info">
+                                                        <p>2. Song, nếu để tân trang phòng ngủ thì bạn hãy chọn gỗ sáng màu để tạo cảm giác thư thái nhé.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view3.jpg" alt=""></a>
+                                                    <div class="view-info">
+                                                        <p>3. Đừng vội vứt miếng gỗ thừa này đi vì nó có thể biến thành đầu giường vừa hiện đại lại tối giản trong phòng ngủ của bạn.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view4.jpg" alt=""></a>
+                                                    <div class="view-info">
+                                                        <p>4. Ai mà nghĩ thùng rượu cũ lại có thể biến thành giá đựng đồ gọn gàng thế này chứ?</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view5.jpg" alt=""></a>
+                                                    <div class="view-info">
+                                                        <p>5. Chỉ cần tỉ mỉ và khéo léo, bạn có thể biến dát giường thành sàn gỗ xinh xắn trong vườn nhà.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view6.jpg" alt=""></a>
+                                                    <div class="view-info">
+                                                        <p>6. Lát tường bằng nhiều mảnh gỗ dài sẽ khiến gian nhà vừa ấm cúng lại mang đậm phong cách vintage đấy.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view7.jpg" alt=""></a>
+                                                    <div class="view-info">
+                                                        <p>7. Đừng nghĩ xích đu thì phải diêm dúa công chúa, đôi khi sự tối giản cũng có sức hút đặc biệt.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view8.jpg" alt=""></a>
+                                                    <div class="view-info">
+                                                        <p>8. Sao không tái sử dụng thùng rượu cũ và chế chúng thành bàn làm việc nhỏ xinh nhỉ?</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view9.jpg" alt=""></a>
+                                                    <div class="view-info">
+                                                        <p>9. Nếu được tận dụng đúng cách, chiếc dát giường ẩm mốc sẽ thành tấm bình phong kiêm giá treo tranh hữu hiệu.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view10.jpg" alt=""></a>
+                                                    <div class="view-info">
+                                                        <p>10. Gian bếp nhà bạn sẽ không còn lộn xộn bởi đống xoong chảo nữa nếu được treo gọn gàng trên chiếc giá gỗ này.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body-view">
+                                                    <a href="http://"><img src="./assets/img/view11.jpg" alt=""></a>
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end article content -->
-                                <!-- article facebook comment -->
-                                <div class="fbcomment">
-                                    <div class="comment">
-                                        <div class="sort-comment">
-                                            <div class="sort-left">
-                                                <span>0 bình luận</span>
+                                                </div>
                                             </div>
-                                            <div class="sort-right">
-                                                Sắp xếp theo
-                                                <select>
+                                        </div>
+                                        <!-- end article content -->
+                                        <!-- article facebook comment -->
+                                        <div class="fbcomment">
+                                            <div class="comment">
+                                                <div class="sort-comment">
+                                                    <div class="sort-left">
+                                                        <span>0 bình luận</span>
+                                                    </div>
+                                                    <div class="sort-right">
+                                                        Sắp xếp theo
+                                                        <select>
                                                 <option value="">Mới nhất</option>
                                                 <option value="">Cũ nhất</option>
                                             </select>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="comment-comment">
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="comment-comment">
 
-                                            <div class="comment-right">
-                                                <input type="text" name="" id="" placeholder="Thêm bình luận">
+                                                    <div class="comment-right">
+                                                        <input type="text" name="" id="" placeholder="Thêm bình luận">
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <span><i class="fa fa-facebook-official" aria-hidden="true"></i>  <a href="#">Plugin bình luận trên facebook</a></span>
                                             </div>
                                         </div>
-                                        <hr>
-                                        <span><i class="fa fa-facebook-official" aria-hidden="true"></i>  <a href="#">Plugin bình luận trên facebook</a></span>
+                                        <!-- end article facebook comment -->
+                                        <!-- article related -->
+                                        <div class="article-related">
+                                            <div class="related">
+                                                <h3>Các bài viết liên quan</h3>
+                                                <ul>
+                                                    <li><a href="http://">Kiểu tủ gương vừa xinh vừa tiện cho nhà chật hẹp</a></li>
+                                                    <li><a href="http://">15 đồ nội thất tái chế từ gỗ thừa đem tới vẻ đẹp vintage cho ngôi nhà</a></li>
+                                                    <li><a href="http://">Móc treo đồ đàn accordion treo đâu cũng thành xinh</a></li>
+                                                    <li><a href="http://">Căn hộ ấm áp nhờ biết cách sử dụng nội thất gỗ</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end article related -->
                                     </div>
                                 </div>
-                                <!-- end article facebook comment -->
-                                <!-- article related -->
-                                <div class="article-related">
-                                    <div class="related">
-                                        <h3>Các bài viết liên quan</h3>
-                                        <ul>
-                                            <li><a href="http://">Kiểu tủ gương vừa xinh vừa tiện cho nhà chật hẹp</a></li>
-                                            <li><a href="http://">15 đồ nội thất tái chế từ gỗ thừa đem tới vẻ đẹp vintage cho ngôi nhà</a></li>
-                                            <li><a href="http://">Móc treo đồ đàn accordion treo đâu cũng thành xinh</a></li>
-                                            <li><a href="http://">Căn hộ ấm áp nhờ biết cách sử dụng nội thất gỗ</a></li>
+                            </div>
+                            <!-- end content blog -->
+                            <!-- content side bar -->
+                            <div class="col-lg-3">
+                                <div class="content__sidebar medium--one-whole small--one-whole">
+                                    <!-- list categories -->
+                                    <div class="list-categories">
+                                        <div class="blog-sb-title">
+                                            <h4>DANH MỤC TIN TỨC</h4>
+                                        </div>
+                                        <ul class="list">
+                                            <li><a href="#">Tin tức</a></li>
+                                            <li><a href="#">Mẹo </a></li>
+                                            <li><a href="#">Tin nổi bật</a></li>
                                         </ul>
                                     </div>
+                                    <!-- end list categories -->
+                                    <!-- all tag -->
+                                    <div class="all-tags">
+                                        <div class="blog-sb-title">
+                                            <h4>DANH MỤC TIN TỨC</h4>
+                                        </div>
+                                        <div class="blog_tag">
+                                            <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Mẹo</a>
+                                            <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Handmade</a>
+                                            <br>
+                                            <a href="http://"><i class="fa fa-tag" aria-hidden="true"></i> Bài viết nổi bật</a>
+                                            <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Handmade</a>
+                                            <br>
+                                            <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Tin tức</a>
+                                        </div>
+                                    </div>
+                                    <div class="blog-banner">
+                                        <img src="./assets/img/blog_banner_2.webp" alt="" class="blog-banner-img">
+                                    </div>
+                                    <!-- end all tag -->
                                 </div>
-                                <!-- end article related -->
                             </div>
+                            <!-- end content side bar -->
                         </div>
-                        <!-- end content blog -->
-                        <!-- content side bar -->
-                        <div class="content__sidebar medium--one-whole small--one-whole">
-                            <!-- list categories -->
-                            <div class="list-categories">
-                                <div class="blog-sb-title">
-                                    <h4>DANH MỤC TIN TỨC</h4>
-                                </div>
-                                <ul class="list">
-                                    <li><a href="#">Tin tức</a></li>
-                                    <li><a href="#">Mẹo </a></li>
-                                    <li><a href="#">Tin nổi bật</a></li>
-                                </ul>
-                            </div>
-                            <!-- end list categories -->
-                            <!-- all tag -->
-                            <div class="all-tags">
-                                <div class="blog-sb-title">
-                                    <h4>DANH MỤC TIN TỨC</h4>
-                                </div>
-                                <div class="blog_tag">
-                                    <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Mẹo</a>
-                                    <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Handmade</a>
-                                    <br>
-                                    <a href="http://"><i class="fa fa-tag" aria-hidden="true"></i> Bài viết nổi bật</a>
-                                    <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Handmade</a>
-                                    <br>
-                                    <a href="http://"><i class="fa fa-tag " aria-hidden="true"></i> Tin tức</a>
-                                </div>
-                            </div>
-                            <div class="blog-banner">
-                                <img src="./assets/img/blog_banner_2.webp" alt="" class="blog-banner-img">
-                            </div>
-                            <!-- end all tag -->
-                        </div>
-                        <!-- end content side bar -->
-
                     </div>
                 </div>
             </div>
         </div>
         <!-- endcontent -->
         <!-- footer -->
-
+        <!-- footer -->
+        <div w3-include-html="footer.html"></div>
+        <div class='lentop'>
+            <div>
+                <img src='https://1.bp.blogspot.com/-k6sikOdzFXQ/VwqCKDosmEI/AAAAAAAAKxE/nLxLhkTIO6o3iE5ZWmtxo2bf4QHdzPQNQ/s1600/top.png' />
+            </div>
+        </div>
+        <!-- end footer -->
         <!-- end footer -->
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="./assets/js/detail-new.js"></script>
     <!-- link js slick slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
     <!-- slick slider blog single slide -->
-    <script src="./assets/js/detail-new.js"></script>
+
     <script>
         $('.blog-single-slide').slick({
             slidesToShow: 2,
@@ -389,6 +435,7 @@
     <script>
         includeHTML();
     </script>
+
 </body>
 
 </html>

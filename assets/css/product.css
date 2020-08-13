@@ -16,7 +16,6 @@ html {
 
 .header .header--top {
     background-color: #13100E;
-    padding-bottom: 10px;
 }
 
 .header .header__title {
@@ -197,6 +196,95 @@ html {
     margin: 0px;
     width: 50%;
 }
+
+
+/* product-head */
+
+.product .product-head {
+    padding-bottom: 3rem;
+}
+
+.product .product-head .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product .product-head .head .head-title h1 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+}
+
+.product .product-head .head .head-select label {
+    line-height: 40px;
+    font-size: 1.4rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.product .product-head .head .head-select select {
+    outline: 0px;
+    height: 40px;
+    line-height: 40px;
+    background-position: right 10px center;
+    padding: 0px 22px 0px 10px;
+    font-size: 1.4rem;
+    font-family: 'Roboto Slab', serif;
+    background-image: url(//theme.hstatic.net/1000263110/1000337803/14/ico-select.svg?v=1389);
+    background-repeat: no-repeat;
+    appearance: none;
+    text-indent: 0.01px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+}
+
+.product .product-head .head .head-select select option {
+    height: 40px;
+}
+
+.product .product-head .head .head-select select option:hover {
+    background-color: cornflowerblue;
+}
+
+
+/* back to top */
+
+.lentop {
+    display: none;
+    bottom: 10%;
+    right: 10px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+}
+
+.lentop div {
+    background: #DEBF97;
+    padding: 11px 12.5px;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3)
+}
+
+.lentop:hover div {
+    background: #C89551;
+    padding: 11px 12.5px;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3)
+}
+
+.lentop img {
+    width: 16px;
+    height: 16px;
+}
+
+@media(max-width: 991px) {
+    .header .header--top {
+        padding-bottom: 0px;
+    }
+}
+
+@media(max-width:767px) {}
+
+@media(max-width:575px) {}
 
 
 /* end product */

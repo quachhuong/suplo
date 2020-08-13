@@ -14,8 +14,11 @@
     justify-content: flex-end;
 }
 
-.header-abs .header__top .header__top-icon,
-.header__top-contact {
+.header-abs .header__top .header__top-icont {
+    margin-bottom: 0px;
+}
+
+.header-abs .header__top .header__top-contact {
     margin-bottom: 0px;
 }
 
@@ -29,7 +32,6 @@
 .header__top-contact li {
     list-style-type: none;
     padding: 0 2rem;
-    font-size: 1.4rem;
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
 }
@@ -179,11 +181,12 @@
     justify-content: space-between;
     white-space: nowrap;
     /* position: relative; */
-    padding: 0.5rem 0;
+    /* padding: 0.5rem 0; */
 }
 
 .header__menu .header__menu-logo {
-    padding-left: 7rem;
+    padding-left: 3.5rem;
+    padding-right: 2rem;
 }
 
 .header__menu .menu-list {
@@ -197,7 +200,9 @@
 .header__menu .menu-list {
     display: flex;
     background-color: #302924;
-    padding: 2.5rem 7rem 2.5rem 10rem;
+    padding: 2.5rem 0;
+    padding-right: auto;
+    padding-left: auto;
     border-radius: 35px 0 0 35px;
     margin-bottom: 0;
     border: 1px solid #D3C2AE;
@@ -214,6 +219,7 @@
 
 .header__menu .menu-list .list-item {
     padding: 0 1.5rem;
+    margin: auto;
 }
 
 .header__menu .menu-list li a {
@@ -240,9 +246,9 @@
 
 .humberger .line1 {
     background-color: #C89551;
-    height: 2px;
-    width: 2.5rem;
-    margin: 3px;
+    height: 4px;
+    width: 3.5rem;
+    margin: 5px;
 }
 
 
@@ -409,7 +415,7 @@
         display: block;
     } */
 
-@media(max-width:991px) {
+@media(max-width: 991px) {
     .humberger {
         display: block;
         position: absolute;
@@ -420,9 +426,8 @@
     .header__menu {
         flex-direction: column;
         align-items: flex-start;
-        display: flex;
-        align-items: center;
         background: rgba(48, 41, 36, 0.7);
+        padding: 1rem;
     }
     .header__menu .menu-list {
         flex-direction: column;
@@ -438,10 +443,11 @@
         max-height: 100vh;
     }
     .header__menu .menu-list .list-item {
-        padding: 1.5rem;
+        padding: 0 1.5rem;
+        margin: 2rem;
     }
-    .header__menu .header__menu-logo {
-        padding-left: 0px;
+    .header__top {
+        display: none;
     }
 }
 

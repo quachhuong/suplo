@@ -1,6 +1,6 @@
 var menu = {
     init: function() {
-        this.clickShowMenu('#clickbar', '#menubar', 'active');
+        this.clickShowMenu('#clickbar5', '#menubar5', 'active');
         this.clickShowMenu('#clickbar1', '#menubar1', 'active');
         this.clickShowMenu('#clickbar2', '#menubar2', 'active');
         this.clickShowMenu('#clickbar3', '#menubar3', 'active');
@@ -61,3 +61,14 @@ function includeHTML() {
         }
     }
 }
+// back to top
+// back to top
+$(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) $(".lentop").fadeIn();
+        else $(".lentop").fadeOut();
+    });
+    $(".lentop").click(function() {
+        $("body,html").animate({ scrollTop: 0 }, "slow");
+    });
+});
